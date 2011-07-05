@@ -1,0 +1,6 @@
+.bundle
+db/*.sqlite3
+config/*.yml
+log/*.log
+tmp/
+public/assests/

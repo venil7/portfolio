@@ -1,0 +1,38 @@
+<% content_for :title, @project.name %>
+
+<section id="contentwrap">
+<div id="contents" class="normalcontents">
+    <section id="normalpage">
+    <section id="left">
+    <h2><%= @project.name %></h2>
+    <section class="blogpreview">
+
+        <article class="postpreview">
+        <section class="entry">
+        <p><%= image_tag @project.image.url(:original), {:align=>:right} %>
+           <%= @project.long %>
+        </p>
+        </section>
+        <aside class="postinfo">
+        <p>
+            <time><%=@project.created_at.strftime("%a, %d %b %Y")%></time>
+            <span><%= @project.short%></span>
+            <span>for <%= @project.company%></span>
+        </p>
+        </aside>
+        <div class="clear">
+        </div>
+        </article>
+      <%= disqus_code %>
+    </section>
+    </section>
+    <section id="sidebar">
+        <%= render "side_testimonials" %>
+        <%= render "side_posts", :posts => @side_posts %>
+        <%= render "side_projects", :projects => @side_projects %>
+    </section>
+    <div class="clear">
+    </div>
+    </section>
+</div>
+</section>

@@ -1,0 +1,74 @@
+<% content_for :title, "Services" %>
+<section id="contentwrap">
+<div id="contents" class="normalcontents">
+    <section id="normalpage">
+    <section id="left">
+    <h2>Services</h2>
+    <section class="blogpreview">
+        <article class="postpreview">
+        <section class="entry">
+        <h3>service1</h3>
+        <p>
+            some text
+        </p>
+        </section>
+        <aside class="postinfo">
+        <p>
+            <img src="" />
+        </p>
+        </aside>
+
+
+        <div class="clear">
+        </div>
+        </article>
+
+        <article class="postpreview">
+        <section class="entry">
+        <h3>Website development</h3>
+        <p>
+            some text other
+        </p>
+
+        <h3>Website maintenance and support</h3>
+        <p>
+            some text other
+        </p>
+
+        <h3>Domain name maintenance</h3>
+        <p>
+            some text other
+        </p>
+
+        <h3>Hosting and website availability</h3>
+        <p>
+            some text other
+        </p>
+
+        <h3>Domain Email and calendar</h3>
+        <p>
+            some text other
+        </p>
+
+        <h3>Customer support</h3>
+        <p>
+            some text other
+        </p>
+        </section>
+
+        <div class="clear">
+        </div>
+        </article>
+
+    </section>
+    </section>
+    <section id="sidebar">
+        <%= render "side_testimonials" %>
+        <%= render "side_posts", :posts => @side_posts %>
+        <%= render "side_projects", :projects => @side_projects %>
+    </section>
+    <div class="clear">
+    </div>
+    </section>
+</div>
+</section>

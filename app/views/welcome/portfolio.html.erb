@@ -1,0 +1,39 @@
+<% content_for :title, "Portfolio" %>
+<section id="contentwrap">
+<div id="contents" class="normalcontents">
+<section id="normalpage">
+
+<section id="left">
+<h2>Latest Projects</h2>
+<ul>
+    <% @projects.each { |p| %>
+    <li>
+        <div class="project">
+            <div class="project_image">
+                <%= image_tag(p.image.url(:original)) %>
+            </div>
+            <div class="project_descr">
+                <h3><%= link_to p.name, {:action => :project, :id => p.id} %></h3>
+                <strong><%= p.company %></strong>
+                <p><%= p.short %></p>
+                <p><%= link_to p.url,  p.url, {:target => :_blank} %></p>
+
+            </div>
+        </div>
+    </li>
+ <% } %>
+</ul>
+<%= paginate @projects %>
+
+</section>
+
+<section id="sidebar">
+        <%= render "side_testimonials" %>
+        <%= render "side_posts", :posts => @side_posts %>
+        <%= render "side_projects", :projects => @side_projects %>
+</section>
+
+<div class="clear"></div>
+</section>
+</div>
+</section>

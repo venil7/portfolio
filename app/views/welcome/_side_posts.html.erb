@@ -1,0 +1,10 @@
+<h2>Blog Posts</h2>
+<div class="sbwrap">
+    <% if posts.any? %>
+    <ul>
+        <% posts.each { |p| %>
+            <li><%= link_to p.title, {:action => :project, :id => p.id} %></li>
+        <% } %>
+    </ul>
+    <% end %>
+</div>

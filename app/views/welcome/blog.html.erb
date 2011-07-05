@@ -1,0 +1,40 @@
+<% content_for :title, "Latest Blog Entries" %>
+<section id="contentwrap">
+<div id="contents" class="normalcontents">
+    <section id="normalpage">
+    <section id="left">
+    <h2>Latest Blog Entries</h2>
+    <section class="blogpreview">
+    <% @posts.each { |p| %>
+        <article class="postpreview">
+        <section class="entry">
+        <h3><%=link_to p.title, {:action => :post, :id => p.id} %></h3>
+        <p>
+            <%= p.text[0..400]  %>
+            <%= link_to "Read more", {:action => :post, :id => p.id} %>
+        </p>
+        </section>
+        <aside class="postinfo">
+        <p>
+            <time><%=p.created_at.strftime("%a, %d %b %Y")%></time>
+            <span><%= p.category%></span>
+            <span>by <%= p.author%></span>
+        </p>
+        </aside>
+        <div class="clear">
+        </div>
+        </article>
+    <% } %>
+    <%=paginate @posts %>
+    </section>
+    </section>
+    <section id="sidebar">
+        <%= render "side_testimonials" %>
+        <%= render "side_posts", :posts => @side_posts %>
+        <%= render "side_projects", :projects => @side_projects %>
+    </section>
+    <div class="clear">
+    </div>
+    </section>
+</div>
+</section>

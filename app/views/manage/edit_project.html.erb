@@ -1,0 +1,6 @@
+<%= render "shared/error_list", :item => @project %>
+<%= form_for @project, :as => :project, :url=>{:action => :update_project, :id=>@project.id}, :html => { :multipart => true } do |form| %>  
+    <%= render "shared/project_form", :form => form %>
+    <%=image_tag @project.image(:thumb) %>
+    <%= form.submit "Submit" %>  
+<% end %> 

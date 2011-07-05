@@ -1,0 +1,29 @@
+<li>  
+  <%= form.label :name, "Name" %>  
+  <%= form.text_field :name %>  
+</li>
+
+<li>  
+  <%= form.label :short, "Short Description" %>  
+  <%= form.text_field :short %>  
+</li>
+
+<li>  
+  <%= form.label :long, "Long Description" %>  
+  <%= form.text_area :long, {:rows=>5,:cols=>20} %>  
+</li>
+
+<li>  
+  <%= form.label :url, "URL" %>  
+  <%= form.text_field :url %>  
+</li>
+
+<li>  
+  <%= form.label :company, "Company" %>  
+  <%= form.text_field :company %>  
+</li>
+
+<li>  
+  <%= form.label :image, "Photo" %>  
+  <%= form.file_field :image %>  
+</li>

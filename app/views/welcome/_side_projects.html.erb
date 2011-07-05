@@ -1,0 +1,10 @@
+<h2>Latest Projetcs</h2>
+<div class="sbwrap">
+    <% if projects.any? %>
+    <ul>
+        <% projects.each { |p| %>
+            <li><%= link_to p.name, {:action => :project, :id => p.id} %></li>
+        <% } %>
+    </ul>
+    <% end %>
+</div>

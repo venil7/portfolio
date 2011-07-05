@@ -1,0 +1,5 @@
+<%= render "shared/error_list", :item => @post %>
+<%= form_for @post, :as => :post, :url=>{:action => :create_post} do |form| %>  
+    <%= render "shared/post_form", :form => form %>
+    <%= form.submit "Submit" %>  
+<% end %> 

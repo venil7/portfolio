@@ -1,0 +1,116 @@
+<% content_for :title, "Ruby On Rails solutions"%>
+<header id="homeheader">
+<div id="slider">
+    <div class="container">
+        <ul class="slides">
+            <li>
+            <div class="thumbholder">
+                <img src="images/slide-1.png" width="200" height="200" alt="Web 2.0"/>
+            </div>
+            <div class="txtholder">
+                <h2>Modern, Accessible and Beautiful Websites and Web applications</h2>
+                <p>
+                    Whether it's small personal webpage or an ecommerce site - in DarkRuby we develop real Web 2.0 applications and websites, with rich user experience.
+                </p>
+            </div>
+            </li>
+            <li>
+            <div class="thumbholder">
+                <img src="images/slide-2.png" width="200" height="200" alt="Ruby On Rails"/>
+            </div>
+            <div class="txtholder">
+                <h2>Ruby on Rails and Agile Development</h2>
+                <p>
+                    We use Ruby on Rails and agile development practices, and our capabilities stretch from small to enterprise Rails applications.
+                </p>
+            </div>
+            </li>
+            <li>
+            <div class="thumbholder">
+                <img src="images/slide-3.png" width="200" height="200" alt="Cloud Computing"/>
+            </div>
+            <div class="txtholder">
+                <h2>Cloud Computing</h2>
+                <p>
+                    All our projects are hosted with Amazon EC2, that guarantees security, scalability and reliability, with 99.95% uptime.
+                </p>
+            </div>
+            </li>
+            <li>
+            <div class="thumbholder">
+                <img src="images/slide-4.png" width="200" height="200" alt="First Image"/>
+            </div>
+            <div class="txtholder">
+                <h2>Integrated and ready to operate solutions</h2>
+                <p>
+                    DarRuby provides full solution from idea to domain and hosting registration to ready to operate website.
+                </p>
+            </div>
+            </li>
+        </ul>
+        <ul class="pagination">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+        </ul>
+    </div>
+</div>
+</header>
+</section>
+<section id="contentwrap">
+<div id="contents">
+    <div id="topcolumns">
+        <div class="col">
+            <img src="images/idea.png" width="48" height="48" alt="graph" class="imgright">
+            <h2>idea</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer egestas purus bibendum neque aliquam ut posuere elit semper. Fusce sagittis pharetra eros, sit amet consequat sem mollis vitae. Mauris elit sapien, ultricies ac congue at, facilisis at metus. Maecenas imperdiet justo vel dolor eleifend id vulputate erat feugiat.
+            </p>
+        </div>
+        <div class="col">
+            <img src="images/build.png" width="48" height="48" alt="graph" class="imgright">
+            <h2>We build it</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer egestas purus bibendum neque aliquam ut posuere elit semper. Fusce sagittis pharetra eros, sit amet consequat sem mollis vitae. Mauris elit sapien, ultricies ac congue at, facilisis at metus. Maecenas imperdiet justo vel dolor eleifend id vulputate erat feugiat.
+            </p>
+        </div>
+        <div class="col">
+            <img src="images/success.png" width="48" height="48" alt="graph" class="imgright">
+            <h2>profit</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer egestas purus bibendum neque aliquam ut posuere elit semper. Fusce sagittis pharetra eros, sit amet consequat sem mollis vitae. Mauris elit sapien, ultricies ac congue at, facilisis at metus. Maecenas imperdiet justo vel dolor eleifend id vulputate erat feugiat.
+            </p>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <section id="normalpage">
+    <section id="left">
+        <article>
+        <h2>Latest From The Blog</h2>
+        <h3><%=link_to @post.title, { :action=>:post, :id=>@post.id }%></h3>
+        <p>
+           <%=@post.text%>
+           <%=link_to "Read More", {:action=>:post,:id=>@post.id}%>
+        </p>
+        </article>
+    </section>
+    <section id="sidebar">
+        <%= render "side_testimonials" %>
+    </section>
+    <div class="clear">
+    </div>
+    </section>
+</div>
+</section>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+    $(function(){
+        $('#slider').loopedSlider({
+            autoStart: 6000,
+            restart: 5000
+        });
+    });
+</script>

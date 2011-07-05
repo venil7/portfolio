@@ -1,0 +1,5 @@
+<%= render "shared/error_list", :item => @project %>
+<%= form_for @project, :as => :project, :url=>{:action => :create_project}, :html => { :multipart => true } do |form| %>  
+    <%= render "shared/project_form", :form => form %>
+    <%= form.submit "Submit" %>  
+<% end %> 

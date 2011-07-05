@@ -1,0 +1,15 @@
+unread enquiries: (<%=@enquiries.all_unread.count%>)
+read enquiries: (<%=@enquiries.all_read.count%>)
+total enquiries: (<%=@enquiries.count%>)
+<%=paginate @enquiries %>
+<table class='list'>
+<% @enquiries.each do |e| %>
+  <tr>
+    <td><%= e.read ? "" : "*" %> </td>
+    <td><%= link_to e.name, :action => :enquiry,:id => e.id  %> </td>
+    <td><%= e.company  %> </td>
+    <td><%= e.email  %> </td>
+    <td><%= link_to "delete", :action => :delete_enquiry,:id => e.id  %></td>
+  </tr>
+<% end %>
+</table>

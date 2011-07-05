@@ -1,0 +1,13 @@
+<h3><%= link_to "add project", :action=>:add_project%></h3>
+
+<%=paginate @projects %>
+<table class='list'>
+<% @projects.each do |p| %>
+  <tr>
+    <td><%= p.id %> </td>
+    <td><%= image_tag p.image :admin  %> </td>
+    <td><%= link_to p.name, :action => :edit_project,:id => p.id  %> </td>
+    <td><%= link_to "delete", :action => :delete_project,:id => p.id  %></td>
+  </tr>
+<% end %>
+</table>

@@ -1,0 +1,12 @@
+<h3><%= link_to "add post", :action=>:add_post%></h3>
+
+<%=paginate @posts %>
+<table class='list'>
+<% @posts.each do |p| %>
+  <tr>
+    <td><%= p.id %> </td>
+    <td><%= link_to p.title, :action => :edit_post,:id => p.id  %> </td>
+    <td><%= link_to "delete", :action => :delete_post,:id => p.id  %></td>
+  </tr>
+<% end %>
+</table>

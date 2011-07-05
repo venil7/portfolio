@@ -1,0 +1,49 @@
+<% content_for :title, 'Contact form'%>
+<header id="normalheader">
+</header>
+</section>
+<section id="contentwrap">
+<div id="contents" class="normalcontents">
+    <section id="normalpage">
+    <section id="left">
+    <h2>Contact Us</h2>
+    <section class="form">
+    <%= render "shared/error_list", :item => @enquiry %>
+    <%= form_for @enquiry, :as => :enquiry, :url=>{:action => :create_enquiry}, :html=>{:class=>'formstyle1'} do |form| %>
+        <div class="field">
+            <%= form.label :name, "Name*:" %>
+            <%= form.text_field :name, {:placeholder => "Enter your name", :autofocus => true, :class=>"textfield"} %>
+        </div>
+        <div class="field">
+            <%= form.label :company, "Company:" %>
+            <%= form.text_field :company, {:placeholder => "Enter your company", :class=>"textfield"} %>
+        </div>
+        <div class="field">
+            <%= form.label :email, "Email*:" %>
+            <%= form.text_field :email, {:placeholder => "Enter your email", :class=>"textfield"} %>
+        </div>
+        <div class="field">
+            <%= form.label :phone, "Phone:" %>
+            <%= form.text_field :phone, {:placeholder => "Enter your phone", :class=>"textfield"} %>
+        </div>
+        <div class="field">
+            <%= form.label :text, "Message*:" %>
+            <%= form.text_area :text, { :class=>"textfie_ld", :rows=>"8", :class=>"text-area"} %>
+        </div>
+        <div class="button">
+            <%= form.submit "Submit", {:class=>"btn", :value=>"Submit"} %>
+        </div>
+    <% end %>
+    </section>
+    </section>
+    <section id="sidebar">
+        <%= render "side_testimonials" %>
+        <%= render "side_posts", :posts => @side_posts %>
+        <%= render "side_projects", :projects => @side_projects %>
+    </section>
+    <div class="clear">
+    </div>
+    </section>
+</div>
+</section>
+</div>
