@@ -18,7 +18,7 @@ class ManageController < ApplicationController
 
   def create_project
     @project = Project.new(params[:project])
-    _try_save_model @project, :add_project, :pro
+    _try_save_model @project, :add_project, :projects
   end
 
   def edit_project
@@ -28,7 +28,7 @@ class ManageController < ApplicationController
   def update_project
     @project = Project.find(params[:id])
     @project.attributes= params[:project]
-    _try_save_model @project, :edit_project, :pro
+    _try_save_model @project, :edit_project, :projects
   end
 
 
