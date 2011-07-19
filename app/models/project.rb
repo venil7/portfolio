@@ -1,4 +1,5 @@
 class Project < ActiveRecord::Base
+  default_scope order("updated_at desc")
   has_attached_file :image,
                     :styles => { :original => "300x200>>", :thumb => "95x95>", :admin => "40x40>" },
                     :url  => "/assets/images/:id/:style/:basename.:extension",

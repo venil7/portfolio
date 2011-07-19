@@ -112,7 +112,10 @@ blockquote cite {display:block; font:italic 1.2em "Trebuchet MS", Arial, Helveti
 #sidebar ul li a { line-height:20px; border_bottom:solid 1px #ddd; padding:5px 0 0 25px; background:url(/images/bullet_white.png) left 7px no-repeat; display:block;}
 #sidebar ul li a:hover {background:url(/images/bullet_white.png) left 7px no-repeat; color:#036;}
 .project {height:210px;}
+p.url {color:lightblue;}
+p.small {color:#666;}
 .project_image {float:left;width:320px;}
+.project_image img {border:2px solid #eee;padding:5px;}
 .project_descr {float:right; width:280px;}
 .sbwrap.twocol li {width:49%; float:left;}
 .form {padding:15px;}

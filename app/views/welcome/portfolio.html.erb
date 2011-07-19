@@ -14,9 +14,9 @@
             </div>
             <div class="project_descr">
                 <h3><%= link_to p.name, {:action => :project, :id => p.id} %></h3>
-                <strong><%= p.company %></strong>
-                <p><%= p.short %></p>
-                <p><%= link_to p.url,  p.url, {:target => :_blank} %></p>
+                <p><strong><%= p.company %></strong></p>
+                <p class='url'><small><%= p.url %></small></p>
+                <p class='short'><small><abbr title="<%=p.long%>"><%= p.short %></abbr></small></p>
 
             </div>
         </div>
