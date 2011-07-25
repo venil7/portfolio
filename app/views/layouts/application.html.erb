@@ -39,18 +39,22 @@
             <h2>Social</h2>
             <p>
                 <ul>
-                    <li><img src='/images/facebook.png'/> Facebook</li>
-                    <li><img src='/images/twitter.png'/> Twitter</li>
+                    <li style='float: left;'><a href='http://facebook.com/darkruby'><img src='/images/facebook.png'/></a></li>
+                    <li><a href='http://twitter.com/darkruby'><img src='/images/twitter.png'/></a></li>
                 </ul>
             </p>
         </div>
         <div class="block2">
             <h2>Latest Project</h2>
+            <div class="projectthmb"> <%= link_to(image_tag(@side_projects.last.image.url('thumb')), {:action=>:portfolio}) %></a></div>
         </div>
         <div class="block3">
             <h2>Contact</h2>
             <p>
-                PROFESSIONAL PORTFOLIO is a Template suitable for Businesses, Web Design Firms or any I.T related company that require a place to showcase their works. This template is released under Creative Commons Attribution License.
+                <strong>DarkRuby Sales:</strong><br/>
+                sales(at)darkruby.co.uk<br/>
+                <strong>DarkRuby Website:</strong><br/>
+                admin(at)darkruby.co.uk
             </p>
         </div>
         <div class="clear">
@@ -65,9 +69,10 @@
                 Designed by : Roshan Ravi
                 Author URI : cssheaven.org
                 Do Not Remove this Credits and Link back to CSSHeaven from the template-->
-            <a href="http://cssheaven.org" title="Free CSS Website Template by CSSHeaven">Website Template</a>
+            Copywriting by
+            <a href="http://anekalee.com/" title="">Aneka Lee</a>
             <!--Design Credits-->
-             by CSSHeaven.org </span>
+             </span>
         </p>
     </div>
     </footer>
