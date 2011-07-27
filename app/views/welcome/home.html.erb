@@ -32,7 +32,7 @@
             <div class="txtholder">
                 <h2>Cloud Computing</h2>
                 <p>
-                    With Amazon Cloud as our hosting provider,  we ensure robust stability and 24hr availability.
+                    Your sense of security is important when it comes to your web-based business or application. With Amazon Cloud as our hosting provider, we ensure robust stability and 24hr availability.
                 </p>
             </div>
             </li>
@@ -91,7 +91,7 @@
         <h2>Latest From The Blog</h2>
         <h3><%=link_to @post.title, { :action=>:post, :id=>@post.id }%></h3>
         <p>
-           <%=@post.text%>
+           <%= raw @post.text[0..1500] %>..
            <%=link_to "Read More", {:action=>:post,:id=>@post.id}%>
         </p>
         </article>
