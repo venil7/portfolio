@@ -10,8 +10,8 @@
         <section class="entry">
         <h3><%=link_to p.title, {:action => :post, :id => p.id} %></h3>
         <p>
-            <%= p.text[0..400]  %>
-            <%= link_to "Read more", {:action => :post, :id => p.id} %>
+            <%= raw "#{p.text[0..400]}.."  %>
+            <%= link_to "read more", {:action => :post, :id => p.id} %>
         </p>
         </section>
         <aside class="postinfo">

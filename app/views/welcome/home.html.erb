@@ -95,7 +95,7 @@
         <h3><%=link_to @post.title, { :action=>:post, :id=>@post.id }%></h3>
         <p>
            <%= raw @post.text[0..1500] %>..
-           <%=link_to "Read More", {:action=>:post,:id=>@post.id}%>
+           <%=link_to "read more", {:action=>:post,:id=>@post.id}%>
         </p>
         </article>
     </section>
